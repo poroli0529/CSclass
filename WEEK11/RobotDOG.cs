@@ -11,17 +11,12 @@ namespace ZooApp
     {
 
         private int _batteryLevel;
-        public RobotDog (string name, COLOR color, int year)
-            : base (name, color, year)
-        {
-
-        }
         public int BatteryLevel
-        { 
+        {
             get { return _batteryLevel; }
             set
             {
-                if(value > 1000 )
+                if ( value > 1000 )
                 {
                     _batteryLevel = 1000;
                 }
@@ -31,7 +26,11 @@ namespace ZooApp
                 }
             }
         }
-        public void charge ()
+        public RobotDog ( string name, COLOR color, int year ) : base (name, color, year) { }
+
+
+
+        public void Charge ()
         {
             BatteryLevel = 1000;
         }
